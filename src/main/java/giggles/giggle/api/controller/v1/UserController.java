@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin
 @Api("操作用户api,包括查询用户列表、查询单个用户、添加用户、更新用户、删除用户")
-@RequestMapping("/users")
+@RequestMapping("/v1/users")
 public class UserController {
     private static Logger logger = Logger.getLogger(UserController.class);
 
@@ -40,6 +40,7 @@ public class UserController {
      */
     @ApiOperation("用户注册接口")
     @PostMapping
+    @Permission
     public Object create(@Valid @RequestBody User user, BindingResult bindingResult) {
         logger.info("post请求: /users");
         if (bindingResult.hasErrors()) {

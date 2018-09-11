@@ -30,7 +30,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/test/**");
+        registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/v1/**");
         super.addInterceptors(registry);
     }
 
