@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="giggles.giggle.infra.mapper.UserMapper">
+    <select id="findUserByName" parameterType="string" resultType="giggles.giggle.domain.entity.User">
+        select user_name,user_gender,email,birthday,user_password,user_authority,user_version
+            from giggle_user
+                where user_name=#{userName}
+    </select>
+
+    <update id="updateWithSafeControl" parameterType="giggles.giggle.domain.entity.User">
+        update giggle_user
+        <set>
+            <if test="userName != null">
+                user_name = #{userName},
+            </if>
+            <if test="userGender != null">
+                user_gender = #{userGender},
+            </if>
+            <if test="email != null">
+                email = #{email},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="userPassword != null">
+                user_password = #{userPassword},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="userLocation != null">
+                user_location = #{userLocation},
+            </if>
+            <if test="avatorPath != null">
+                avator_path = #{avatorPath},
+            </if>
+            <if test="userAuthority != null">
+                user_authority = #{userAuthority},
+            </if>
+            <if test="lastUpdate != null">
+                last_update = #{lastUpdate},
+            </if>
+            <if test="lastUpdateBy != null">
+                last_update_by = #{lastUpdateBy},
+            </if>
+            <if test="userVersion != null">
+                user_version = user_version+1 ,
+            </if>
+        </set>
+        where user_name = #{userName}
+    </update>
+
+    <delete id="deleteUserByName" parameterType="string">
+        delete from giggle_user where user_name=#{userName}
+    </delete>
+</mapper>
