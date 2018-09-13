@@ -10,7 +10,9 @@ import giggles.giggle.infra.tkMapper.TkMapper;
  */
 public interface UserMapper extends TkMapper<User> {
     /**
-     * <p>依据用户名更新数据</p>
+     * <p>依据用户名更新数据,
+     * 注意该方法没有返回列表，因此默认只能查询出一个结果
+     * ，所以注册时要控制用户名不能重复</p>
      *
      * @param username 用户名
      * @return 用户信息

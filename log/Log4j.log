@@ -824,3 +824,23 @@ DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-
 INFO http-nio-8888-exec-9 giggles.giggle.api.controller.v1.UserController - post请求: /users
 INFO http-nio-8888-exec-9 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
 DEBUG http-nio-8888-exec-9 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.UserController - post请求: /users
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.UserController - post请求: /users
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.UserController - post请求: /users
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.UserController - get请求: /users/null
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.UserController - get请求: /users/null
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.UserController - post请求: /users
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.UserController - post请求: /users
+DEBUG http-nio-8888-exec-8 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache

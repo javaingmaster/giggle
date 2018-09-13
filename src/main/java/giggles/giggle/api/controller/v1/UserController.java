@@ -3,10 +3,9 @@ package giggles.giggle.api.controller.v1;
 import javax.validation.Valid;
 
 import giggles.giggle.app.service.UserService;
-import giggles.giggle.domain.entity.Page;
-import giggles.giggle.domain.entity.User;
-import giggles.giggle.infra.util.exception.BindingResultException;
-import giggles.giggle.infra.util.exception.MissRequestParamException;
+import giggles.giggle.domain.entity.*;
+import giggles.giggle.infra.util.exception.C_BindingResultException;
+import giggles.giggle.infra.util.exception.C_MissRequestParamException;
 import giggles.giggle.infra.util.interfaces.Permission;
 import giggles.giggle.infra.util.result.Results;
 import io.swagger.annotations.Api;
@@ -41,10 +40,10 @@ public class UserController {
     @ApiOperation("用户注册接口")
     @PostMapping
     @Permission
-    public Object create(@Valid @RequestBody User user, BindingResult bindingResult) {
+    public Object registry(@Valid @RequestBody User user, BindingResult bindingResult) {
         logger.info("post请求: /users");
         if (bindingResult.hasErrors()) {
-            throw new BindingResultException("create request data error: " + bindingResult.getFieldError().getDefaultMessage());
+            throw new C_BindingResultException("registry request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
         }
         return Results.created(userService.save(user));
     }
@@ -60,8 +59,8 @@ public class UserController {
     @GetMapping(value = "/{username}")
     public Object query(@PathVariable(value = "username") String username) {
         logger.info("get请求: /users/" + username);
-        if ("".equals(username)) {
-            throw new MissRequestParamException("get /users without username");
+        if (username == null) {
+            throw new C_MissRequestParamException("get /users without username");
         }
         User user = userService.findWithName(username);
         if (user == null) {
@@ -82,8 +81,8 @@ public class UserController {
     @PutMapping(value = "/{username}")
     public Object update(@RequestBody User user, @PathVariable(value = "username") String username) {
         logger.info("put请求: /users/" + username);
-        if ("".equals(username)) {
-            throw new MissRequestParamException("put request user without username");
+        if (username == null) {
+            throw new C_MissRequestParamException("put request user without username");
         } else {
             return Results.success(userService.update(username, user));
         }
@@ -100,8 +99,8 @@ public class UserController {
     @DeleteMapping("/{username}")
     public Object delete(@PathVariable(value = "username") String username) {
         logger.info("delete请求: /users " + username);
-        if ("".equals(username)) {
-            throw new MissRequestParamException("delete request user without username");
+        if (username == null) {
+            throw new C_MissRequestParamException("delete request user without username");
         } else {
             int value = userService.delete(username);
             if (value == 0) {
@@ -123,10 +122,28 @@ public class UserController {
     @Permission(level = 2)
     @GetMapping
     public Object list(@Valid @ModelAttribute Page page, BindingResult bindingResult) {
+        logger.info("list");
         if (bindingResult.hasErrors()) {
-            throw new BindingResultException("delete request data error: " + bindingResult.getFieldError().getDefaultMessage());
+            throw new C_BindingResultException("list request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
         }
         return Results.success(userService.list(page));
     }
 
+    /**
+     * <p>登陆</p>
+     *
+     * @param user
+     * @param bindingResult
+     * @return
+     */
+    @ApiOperation("登陆")
+    @Permission
+    @PostMapping("/login")
+    public Object login(@RequestBody User user) {
+        logger.info("login");
+        if (null == user || null == user.getUserName() || null == user.getUserPassword()) {
+            throw new C_MissRequestParamException("login data is illegal");
+        }
+        return Results.success(userService.login(user));
+    }
 }

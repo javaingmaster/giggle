@@ -1,6 +1,5 @@
 package giggles.giggle.infra.repository.impl;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +9,7 @@ import giggles.giggle.domain.entity.User;
 import giggles.giggle.domain.repository.UserRepository;
 import giggles.giggle.infra.constant.PasswordSafety;
 import giggles.giggle.infra.mapper.UserMapper;
-import giggles.giggle.infra.util.exception.FindUserByNameException;
+import giggles.giggle.infra.util.exception.R_FindUserByNameException;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -77,7 +76,7 @@ public class UserRepositoryImpl implements UserRepository {
     public User update(String username, User user) {
         User currentUser = userMapper.findUserByName(username);
         if (currentUser == null) {
-            throw new FindUserByNameException("cannot find a user by username when executing update action");
+            throw new R_FindUserByNameException("cannot find a user by username when executing update action");
         } else {
             user.setUserName(username);
             if (currentUser.getUserVersion().equals(user.getUserVersion())) {

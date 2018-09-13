@@ -6,6 +6,11 @@ import giggles.giggle.app.service.UserService;
 import giggles.giggle.domain.entity.Page;
 import giggles.giggle.domain.entity.User;
 import giggles.giggle.domain.repository.UserRepository;
+import giggles.giggle.infra.util.exception.S_CannotMatchPasswordWhenLogin;
+import giggles.giggle.infra.util.exception.S_CannotMatchUserNameWhenLogin;
+import giggles.giggle.infra.util.exception.S_UserAlreadyExist;
+import giggles.giggle.infra.util.result.Results;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +35,9 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User save(User user) {
+        if (userRepository.findUserByName(user.getUserName()) != null) {
+            throw new S_UserAlreadyExist(" user already exists ");
+        }
         return userRepository.create(user);
     }
 
@@ -77,5 +85,24 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> list(Page page) {
         return userRepository.listAll(page);
+    }
+
+    /**
+     * <p>实现登陆</p>
+     *
+     * @param user 登陆者
+     * @return
+     */
+    @Override
+    public Object login(User user) {
+        String username = user.getUserName();
+        User userInDatabase = userRepository.findUserByName(username);
+        if (null != userInDatabase) {
+            if (DigestUtils.md5Hex(user.getUserPassword()).equals(userInDatabase.getUserPassword())) {
+                return Results.success("login success!");
+            }
+            throw new S_CannotMatchPasswordWhenLogin(" cannot match password when login ");
+        }
+        throw new S_CannotMatchUserNameWhenLogin(" cannot match user name when login ");
     }
 }

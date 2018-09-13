@@ -51,4 +51,12 @@ public interface UserService {
      * @return
      */
     public List<User> list(Page page);
+
+    /**
+     * <P>登陆业务</P>
+     *
+     * @param user 登陆者
+     * @return 登陆信息
+     */
+    public Object login(User user);
 }

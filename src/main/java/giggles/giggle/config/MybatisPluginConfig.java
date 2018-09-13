@@ -3,6 +3,7 @@ package giggles.giggle.config;
 import java.util.Properties;
 
 import com.github.pagehelper.PageHelper;
+import giggles.giggle.infra.util.interceptor.SqlCostInterceptor;
 import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +30,7 @@ public class MybatisPluginConfig {
         pageHelper.setProperties(properties);
 
         //添加插件
-        new SqlSessionFactoryBean().setPlugins(new Interceptor[]{pageHelper});
+        new SqlSessionFactoryBean().setPlugins(new Interceptor[]{pageHelper,new SqlCostInterceptor()});
         return pageHelper;
     }
 }
