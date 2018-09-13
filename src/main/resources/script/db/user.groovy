@@ -9,7 +9,7 @@ databaseChangeLog(logicalFilePath: 'user.groovy'){
             column(name: 'user_name', type: 'VARCHAR(20)', remarks: 'username'){
                 constraints(nullable: false)
             }
-            column(name: 'user_gender', type: 'INT(1)',remarks: 'gender'){
+            column(name: 'user_gender', type: 'TINYINT',remarks: 'gender'){
                 constraints(nullable: false)
             }
             column(name: 'email', type: 'VARCHAR(20)',remarks: 'email'){
