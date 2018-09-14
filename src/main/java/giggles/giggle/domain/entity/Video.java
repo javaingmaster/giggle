@@ -3,6 +3,7 @@ package giggles.giggle.domain.entity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -12,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * <p>视频实体</p>
  */
 @Table(name = "giggle_video")
-public class Video extends AuditDomain{
+public class Video extends AuditDomain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer videoId;
@@ -25,7 +26,7 @@ public class Video extends AuditDomain{
     private String videoDescription;
 
     @Column(name = "video_upload_time")
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date videoUploadTime;
 
     @Column(name = "video_path")
@@ -43,7 +44,10 @@ public class Video extends AuditDomain{
     @Column(name = "video_play")
     private Integer videoPlay;
 
-    public Video(){}
+    private List<Catagroy> catagroys;
+
+    public Video() {
+    }
 
     public Video(@NotNull String videoName) {
         this.videoName = videoName;
@@ -73,6 +77,14 @@ public class Video extends AuditDomain{
 
     public String getVideoDescription() {
         return videoDescription;
+    }
+
+    public List<Catagroy> getCatagroys() {
+        return catagroys;
+    }
+
+    public void setCatagroys(List<Catagroy> catagroys) {
+        this.catagroys = catagroys;
     }
 
     public void setVideoDescription(String videoDescription) {

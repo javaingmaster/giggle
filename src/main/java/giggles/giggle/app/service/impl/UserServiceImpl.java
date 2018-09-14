@@ -99,7 +99,7 @@ public class UserServiceImpl implements UserService {
         User userInDatabase = userRepository.findUserByName(username);
         if (null != userInDatabase) {
             if (DigestUtils.md5Hex(user.getUserPassword()).equals(userInDatabase.getUserPassword())) {
-                return Results.success("login success!");
+                return Results.success(userInDatabase);
             }
             throw new S_CannotMatchPasswordWhenLogin(" cannot match password when login ");
         }
@@ -113,7 +113,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public Byte[] getIndentifyImage() {
-
+        // TODO: 2018/9/14
         return new Byte[0];
     }
 }

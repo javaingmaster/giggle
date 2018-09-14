@@ -5,6 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import java.util.Date;
+import java.util.List;
 
 import giggles.giggle.infra.constant.CheckPattern;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -36,7 +37,7 @@ public class User extends AuditDomain {
 
     @Column(name = "birthday")
     @NotNull
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birthday;
 
     @Column(name = "user_password")
@@ -56,6 +57,14 @@ public class User extends AuditDomain {
     @Column(name = "user_authority")
     @NotNull
     private Integer userAuthority;
+
+    private List<User> follow;
+
+    private List<History> histories;
+
+    private List<Integer> reportComments;
+
+    private List<Integer> reportVideos;
 
     public User() {
     }
@@ -160,6 +169,38 @@ public class User extends AuditDomain {
 
     public void setUserAuthority(Integer userAuthority) {
         this.userAuthority = userAuthority;
+    }
+
+    public List<User> getFollow() {
+        return follow;
+    }
+
+    public void setFollow(List<User> follow) {
+        this.follow = follow;
+    }
+
+    public List<History> getHistories() {
+        return histories;
+    }
+
+    public List<Integer> getReportComments() {
+        return reportComments;
+    }
+
+    public void setReportComments(List<Integer> reportComments) {
+        this.reportComments = reportComments;
+    }
+
+    public List<Integer> getReportVideos() {
+        return reportVideos;
+    }
+
+    public void setReportVideos(List<Integer> reportVideos) {
+        this.reportVideos = reportVideos;
+    }
+
+    public void setHistories(List<History> histories) {
+        this.histories = histories;
     }
 
     @Override

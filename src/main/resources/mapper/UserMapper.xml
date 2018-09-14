@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="giggles.giggle.infra.mapper.UserMapper">
     <select id="findUserByName" parameterType="string" resultType="giggles.giggle.domain.entity.User">
-        select user_name,user_gender,email,birthday,user_password,user_authority,user_version
+        select user_id,user_name,user_gender,email,birthday,user_password,user_authority,user_version
             from giggle_user
                 where user_name=#{userName}
     </select>
