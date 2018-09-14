@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="giggles.giggle.infra.mapper.CommentMapper">
+    <select id="listChildrenComments" parameterType="int" resultMap="listChildren">
+        select comment_id,user_id,video_id,comment_content,comment_time,comment_child
+            from giggle_comment
+                where comment_id=#{commentId} and #{commentId} &lt;&gt; 0;
+    </select>
+    <resultMap id="listChildren" type="giggles.giggle.domain.entity.Comment">
+        <id column="comment_id" property="commentId"></id>
+        <id column="user_id" property="userId"></id>
+        <id column="video_id" property="videoId"></id>
+        <result column="comment_content" property="commentContent"></result>
+        <result column="comment_time" property="commentTime"></result>
+        <result column="comment_child" property="commentChild"></result>
+        <collection property="childrenComments" ofType="giggles.giggle.domain.entity.Comment" column="comment_child"
+                    select="listChildrenComments">
+        </collection>
+    </resultMap>
+
+    <update id="buildRelationBetweenComments" parameterType="giggles.giggle.domain.entity.Comment">
+            update giggle_comment
+                set comment_child=#{commentId}
+                    where comment_id=#{commentParent}
+    </update>
+
+    <delete id="deleteComment" parameterType="int">
+        delete from giggle_comment where comment_id=#{commentId}
+    </delete>
+
+    <select id="getCommentIdByCommentParent" parameterType="int" resultType="giggles.giggle.domain.entity.Comment">
+        select comment_id from giggle_comment where comment_parent=#{commentParent}
+    </select>
+
+    <update id="updateCommentBeforeDeleteComments" parameterType="int">
+        update giggle_comment set comment_child=0 where comment_child=#{commentChild}
+    </update>
+</mapper>

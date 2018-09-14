@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @CrossOrigin
-@Api("操作用户api,包括查询用户列表、查询单个用户、添加用户、更新用户、删除用户")
+@Api("controller for users api")
 @RequestMapping("/v1/users")
 public class UserController {
     private static Logger logger = Logger.getLogger(UserController.class);
@@ -37,7 +37,7 @@ public class UserController {
      * @param bindingResult
      * @return 注册用户数据
      */
-    @ApiOperation("用户注册接口")
+    @ApiOperation("registry")
     @PostMapping
     @Permission
     public Object registry(@Valid @RequestBody User user, BindingResult bindingResult) {
@@ -54,7 +54,7 @@ public class UserController {
      * @param username
      * @return
      */
-    @ApiOperation("依据用户名查询用户")
+    @ApiOperation("query user by name")
     @Permission(level = 2)
     @GetMapping(value = "/{username}")
     public Object query(@PathVariable(value = "username") String username) {
@@ -76,7 +76,7 @@ public class UserController {
      * @param username
      * @return
      */
-    @ApiOperation("更新用户")
+    @ApiOperation("update user")
     @Permission(level = 3)
     @PutMapping(value = "/{username}")
     public Object update(@RequestBody User user, @PathVariable(value = "username") String username) {
@@ -94,7 +94,7 @@ public class UserController {
      * @param username
      * @return
      */
-    @ApiOperation("删除用户")
+    @ApiOperation("delete user by name")
     @Permission(level = 3)
     @DeleteMapping("/{username}")
     public Object delete(@PathVariable(value = "username") String username) {
@@ -118,7 +118,7 @@ public class UserController {
      * @param bindingResult
      * @return
      */
-    @ApiOperation("分页查询用户")
+    @ApiOperation("list users with page")
     @Permission(level = 2)
     @GetMapping
     public Object list(@Valid @ModelAttribute Page page, BindingResult bindingResult) {
@@ -136,7 +136,7 @@ public class UserController {
      * @param bindingResult
      * @return
      */
-    @ApiOperation("登陆")
+    @ApiOperation("login")
     @Permission
     @PostMapping("/login")
     public Object login(@RequestBody User user) {
@@ -145,5 +145,18 @@ public class UserController {
             throw new C_MissRequestParamException("login data is illegal");
         }
         return Results.success(userService.login(user));
+    }
+
+    /**
+     * <p>获取验证码</p>
+     *
+     * @return
+     */
+    @ApiOperation("get identify image")
+    @Permission
+    @GetMapping("/image")
+    public Byte[] getIdentifyImage() {
+        logger.info("get identify image");
+        return null;
     }
 }

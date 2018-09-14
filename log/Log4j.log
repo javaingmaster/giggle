@@ -844,3 +844,85 @@ INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1
 DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
 INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.UserController - post请求: /users
 DEBUG http-nio-8888-exec-8 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-2 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-2 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-2 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+DEBUG http-nio-8888-exec-2 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20008} enter cache
+DEBUG http-nio-8888-exec-2 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20007} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20006} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20006} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20005} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20005} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20004} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20004} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20003} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20003} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} exit cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20007} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20007} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20006} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20006} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20005} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20005} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20004} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20004} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20003} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20003} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} exit cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} exit cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20010} enter cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20010} exit cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20009} enter cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20009} exit cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20008} enter cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20008} exit cache
+DEBUG http-nio-8888-exec-7 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20001} enter cache
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache

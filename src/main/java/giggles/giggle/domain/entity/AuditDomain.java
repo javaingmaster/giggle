@@ -5,6 +5,8 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * @author zty
  *
@@ -13,6 +15,7 @@ import java.util.Date;
 public class AuditDomain {
 
     @Column(name = "last_update")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     protected Date lastUpdate;
     @Column(name = "last_update_by")
     protected String lastUpdateBy;

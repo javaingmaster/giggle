@@ -59,4 +59,11 @@ public interface UserService {
      * @return 登陆信息
      */
     public Object login(User user);
+
+    /**
+     * <p>获取验证码图片</p>
+     *
+     * @return 验证码资源
+     */
+    public Byte[] getIndentifyImage();
 }

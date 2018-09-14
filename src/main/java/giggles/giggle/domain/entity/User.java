@@ -7,6 +7,7 @@ import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 import giggles.giggle.infra.constant.CheckPattern;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * @author zty
@@ -35,6 +36,7 @@ public class User extends AuditDomain {
 
     @Column(name = "birthday")
     @NotNull
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date birthday;
 
     @Column(name = "user_password")

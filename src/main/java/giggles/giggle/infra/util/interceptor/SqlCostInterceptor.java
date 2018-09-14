@@ -20,6 +20,7 @@ import org.apache.ibatis.session.defaults.DefaultSqlSession.StrictMap;
 
 /**
  * @author 网友
+ * @author 修改者：郭丰年
  *
  * <p>mybatis sql插件</p>
  */
