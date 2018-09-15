@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import giggles.giggle.infra.util.aop.AuthorityInterceptor;
+import giggles.giggle.infra.util.aop.IdentifyCodeInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -31,6 +32,7 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new AuthorityInterceptor()).addPathPatterns("/v1/**");
+        registry.addInterceptor(new IdentifyCodeInterceptor()).addPathPatterns("/v1/users/login");
         super.addInterceptors(registry);
     }
 

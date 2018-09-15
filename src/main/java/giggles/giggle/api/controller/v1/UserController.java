@@ -141,22 +141,9 @@ public class UserController {
     @PostMapping("/login")
     public Object login(@RequestBody User user) {
         logger.info("login");
-        if (null == user || null == user.getUserName() || null == user.getUserPassword()) {
+        if (null == user || user.getUserName().trim().isEmpty() || user.getUserPassword().trim().isEmpty()) {
             throw new C_MissRequestParamException("login data is illegal");
         }
         return Results.success(userService.login(user));
-    }
-
-    /**
-     * <p>获取验证码</p>
-     *
-     * @return
-     */
-    @ApiOperation("get identify image")
-    @Permission
-    @GetMapping("/image")
-    public Byte[] getIdentifyImage() {
-        logger.info("get identify image");
-        return null;
     }
 }

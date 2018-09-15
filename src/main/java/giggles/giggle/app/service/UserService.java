@@ -60,10 +60,4 @@ public interface UserService {
      */
     public Object login(User user);
 
-    /**
-     * <p>获取验证码图片</p>
-     *
-     * @return 验证码资源
-     */
-    public Byte[] getIndentifyImage();
 }

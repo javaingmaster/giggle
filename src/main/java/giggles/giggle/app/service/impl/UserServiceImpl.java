@@ -106,14 +106,4 @@ public class UserServiceImpl implements UserService {
         throw new S_CannotMatchUserNameWhenLogin(" cannot match user name when login ");
     }
 
-    /**
-     * <p>获取验证码图片资源实现</p>
-     *
-     * @return
-     */
-    @Override
-    public Byte[] getIndentifyImage() {
-        // TODO: 2018/9/14
-        return new Byte[0];
-    }
 }

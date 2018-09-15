@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.PrintWriter;
+import java.io.Writer;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.google.gson.Gson;
@@ -49,7 +50,9 @@ public class AuthorityInterceptor implements HandlerInterceptor {
         //todo 查询用户并操作
 
         response.setCharacterEncoding("UTF-8");
-        response.setContentType("application/json; charset=utf-8");
+        response.setContentType("charset=utf-8");
+        PrintWriter writer=response.getWriter();
+        writer.println("sorry! you haven't the authority of api: "+request.getRequestURI());
         response.sendError(401);
 
         return false;

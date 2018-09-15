@@ -1,0 +1,23 @@
+package giggles.giggle.infra.constant;
+
+/**
+ * @author zty
+ *
+ * <p>验证码相关常量</p>
+ */
+public class IdentifyChar {
+    public static final char[] IDENTIFY_CHARS = {
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    };
+
+    public static final int CHAR_NUM = 4;
+
+    public static final int CHAR_LINE = 5;
+
+    public static final int WIDTH = 80;
+
+    public static final int HEIGHT = 40;
+
+    public static final int FONT_SIZE = 30;
+}
