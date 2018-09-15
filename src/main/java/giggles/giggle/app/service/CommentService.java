@@ -7,11 +7,11 @@ import giggles.giggle.domain.entity.Comment;
 /**
  * @author zty
  *
- * <p>评论业务层</p>
+ * <p>comments service</p>
  */
 public interface CommentService {
     /**
-     * <p>存入一条评论</p>
+     * <p>save a comment</p>
      *
      * @param comment
      * @return
@@ -19,7 +19,7 @@ public interface CommentService {
     public Comment create(Comment comment);
 
     /**
-     * <p>查询子评论</p>
+     * <p>query comment</p>
      *
      * @param commentId
      * @return
@@ -27,7 +27,7 @@ public interface CommentService {
     public List<Comment> listChildrenComments(Integer commentId);
 
     /**
-     * <p>删除评论</p>
+     * <p>delete comment</p>
      *
      * @param commentId
      * @return

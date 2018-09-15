@@ -3,9 +3,10 @@ package giggles.giggle.api.controller.v1;
 import javax.validation.Valid;
 
 import giggles.giggle.app.service.UserService;
-import giggles.giggle.domain.entity.*;
-import giggles.giggle.infra.util.exception.C_BindingResultException;
-import giggles.giggle.infra.util.exception.C_MissRequestParamException;
+import giggles.giggle.domain.entity.Page;
+import giggles.giggle.domain.entity.User;
+import giggles.giggle.infra.util.exception.ConBindingResultException;
+import giggles.giggle.infra.util.exception.ConMissRequestParamException;
 import giggles.giggle.infra.util.interfaces.Permission;
 import giggles.giggle.infra.util.result.Results;
 import io.swagger.annotations.Api;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 /**
  * @author zty
  *
- * <p>用户控制层</p>
+ * <p>user controller</p>
  */
 @RestController
 @CrossOrigin
@@ -31,25 +32,25 @@ public class UserController {
     private UserService userService;
 
     /**
-     * <p>注册接口</p>
+     * <p>registry</p>
      *
-     * @param user          注册用户
+     * @param user
      * @param bindingResult
-     * @return 注册用户数据
+     * @return
      */
     @ApiOperation("registry")
     @PostMapping
     @Permission
     public Object registry(@Valid @RequestBody User user, BindingResult bindingResult) {
-        logger.info("post请求: /users");
+        logger.info("post request: /users");
         if (bindingResult.hasErrors()) {
-            throw new C_BindingResultException("registry request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
+            throw new ConBindingResultException("registry request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
         }
         return Results.created(userService.save(user));
     }
 
     /**
-     * <p>依据用户名查询用户</p>
+     * <p>query user by name</p>
      *
      * @param username
      * @return
@@ -58,9 +59,9 @@ public class UserController {
     @Permission(level = 2)
     @GetMapping(value = "/{username}")
     public Object query(@PathVariable(value = "username") String username) {
-        logger.info("get请求: /users/" + username);
+        logger.info("get request: /users/" + username);
         if (username == null) {
-            throw new C_MissRequestParamException("get /users without username");
+            throw new ConMissRequestParamException("get /users without username");
         }
         User user = userService.findWithName(username);
         if (user == null) {
@@ -70,9 +71,9 @@ public class UserController {
     }
 
     /**
-     * <p>更新用户</p>
+     * <p>update user</p>
      *
-     * @param user     此对象必须包含userVersion参数
+     * @param user     the param must include version!
      * @param username
      * @return
      */
@@ -80,16 +81,16 @@ public class UserController {
     @Permission(level = 3)
     @PutMapping(value = "/{username}")
     public Object update(@RequestBody User user, @PathVariable(value = "username") String username) {
-        logger.info("put请求: /users/" + username);
+        logger.info("put request: /users/" + username);
         if (username == null) {
-            throw new C_MissRequestParamException("put request user without username");
+            throw new ConMissRequestParamException("put request user without username");
         } else {
             return Results.success(userService.update(username, user));
         }
     }
 
     /**
-     * <p>根据用户名删除用户</p>
+     * <p>delete user by name</p>
      *
      * @param username
      * @return
@@ -98,9 +99,9 @@ public class UserController {
     @Permission(level = 3)
     @DeleteMapping("/{username}")
     public Object delete(@PathVariable(value = "username") String username) {
-        logger.info("delete请求: /users " + username);
+        logger.info("delete request: /users " + username);
         if (username == null) {
-            throw new C_MissRequestParamException("delete request user without username");
+            throw new ConMissRequestParamException("delete request user without username");
         } else {
             int value = userService.delete(username);
             if (value == 0) {
@@ -112,7 +113,7 @@ public class UserController {
     }
 
     /**
-     * <p>分页查询用户</p>
+     * <p>list users by page</p>
      *
      * @param page
      * @param bindingResult
@@ -122,15 +123,15 @@ public class UserController {
     @Permission(level = 2)
     @GetMapping
     public Object list(@Valid @ModelAttribute Page page, BindingResult bindingResult) {
-        logger.info("list");
+        logger.info("list users by page");
         if (bindingResult.hasErrors()) {
-            throw new C_BindingResultException("list request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
+            throw new ConBindingResultException("list request data is not illegal: " + bindingResult.getFieldError().getDefaultMessage());
         }
         return Results.success(userService.list(page));
     }
 
     /**
-     * <p>登陆</p>
+     * <p>login</p>
      *
      * @param user
      * @param bindingResult
@@ -142,7 +143,7 @@ public class UserController {
     public Object login(@RequestBody User user) {
         logger.info("login");
         if (null == user || user.getUserName().trim().isEmpty() || user.getUserPassword().trim().isEmpty()) {
-            throw new C_MissRequestParamException("login data is illegal");
+            throw new ConMissRequestParamException("login data is illegal");
         }
         return Results.success(userService.login(user));
     }

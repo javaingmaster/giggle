@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author zty
- * <P>数据源配置</P>
+ * <P>datasource config</P>
  */
 @Configuration
 public class DruidDataSourceConfig {

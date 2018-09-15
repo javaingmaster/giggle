@@ -3,7 +3,7 @@ package giggles.giggle.infra.constant;
 /**
  * @author zty
  *
- * <p>密码安全</p>
+ * <p>safety of password</p>
  */
 public class PasswordSafety {
     public static final String SALT = "this is the salt!";

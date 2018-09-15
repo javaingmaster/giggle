@@ -8,44 +8,44 @@ import giggles.giggle.domain.entity.User;
 /**
  * @author zty
  *
- * <p>用户业务接口</p>
+ * <p>user service</p>
  */
 public interface UserService {
     /**
-     * <p>添加用户业务</p>
+     * <p>add user</p>
      *
-     * @param user 用户
-     * @return 用户
+     * @param user
+     * @return
      */
     public User save(User user);
 
     /**
-     * <p>查询用户业务</p>
+     * <p>query user</p>
      *
-     * @param username 用户名
-     * @return 用户
+     * @param username
+     * @return
      */
     public User findWithName(String username);
 
     /**
-     * <p>更新用户业务</p>
+     * <p>update user</p>
      *
-     * @param username 用户名
-     * @param user     用户
-     * @return 用户
+     * @param username
+     * @param user
+     * @return
      */
     public User update(String username, User user);
 
     /**
-     * <p>删除用户业务</p>
+     * <p>delete user</p>
      *
-     * @param username 用户名
-     * @return 用户
+     * @param username
+     * @return
      */
     public int delete(String username);
 
     /**
-     * <p>分页查询用户</p>
+     * <p>list users</p>
      *
      * @param page
      * @return
@@ -53,10 +53,10 @@ public interface UserService {
     public List<User> list(Page page);
 
     /**
-     * <P>登陆业务</P>
+     * <P>login</P>
      *
-     * @param user 登陆者
-     * @return 登陆信息
+     * @param user
+     * @return
      */
     public Object login(User user);
 

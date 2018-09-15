@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @author zty
  *
- * <p>通用实体字段</p>
+ * <p>public params</p>
  */
 public class AuditDomain {
 

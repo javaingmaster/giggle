@@ -1,4 +1,4 @@
-package giggles.giggle.infra.tkMapper;
+package giggles.giggle.infra.tkmapper;
 
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;

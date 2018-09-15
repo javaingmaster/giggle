@@ -3,12 +3,12 @@ package giggles.giggle.infra.mapper;
 import java.util.List;
 
 import giggles.giggle.domain.entity.Comment;
-import giggles.giggle.infra.tkMapper.TkMapper;
+import giggles.giggle.infra.tkmapper.TkMapper;
 
 /**
  * @author zty
  *
- * <p>评论mapper</p>
+ * <p>comment mapper</p>
  */
 public interface CommentMapper extends TkMapper<Comment> {
     /**
@@ -49,6 +49,7 @@ public interface CommentMapper extends TkMapper<Comment> {
     /**
      * <p>update the comment_child column before a comment is deleted</p>
      *
+     * @param commentId
      * @return
      */
     public int updateCommentBeforeDeleteComments(Integer commentId);

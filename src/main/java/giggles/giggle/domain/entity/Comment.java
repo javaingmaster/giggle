@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @author zty
  *
- * <p>评论实体类</p>
+ * <p>comment</p>
  */
 @Table(name = "giggle_comment")
 public class Comment {
@@ -31,7 +31,7 @@ public class Comment {
     private String commentContent;
 
     @Column(name = "comment_time")
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date commentTime;
 
     @Column(name = "comment_parent")
@@ -42,7 +42,8 @@ public class Comment {
 
     private List<Comment> childrenComments;
 
-    public Comment(){}
+    public Comment() {
+    }
 
     public Comment(@NotNull Integer userId, @NotNull Integer videoId, @NotNull String commentContent, @NotNull Date commentTime) {
         this.userId = userId;

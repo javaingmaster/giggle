@@ -7,7 +7,7 @@ import com.alibaba.druid.support.http.WebStatFilter;
 
 /**
  * @author zty
- * druid过滤器
+ * <p>druid filter</p>
  */
 @WebFilter(filterName = "druidWebStatFilter", urlPatterns = "/*",
         initParams = {

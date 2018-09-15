@@ -10,7 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @author zty
  *
- * <p>视频实体</p>
+ * <p>video</p>
  */
 @Table(name = "giggle_video")
 public class Video extends AuditDomain {

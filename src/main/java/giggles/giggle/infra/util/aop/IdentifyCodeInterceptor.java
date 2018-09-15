@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import java.io.PrintWriter;
 
+import giggles.giggle.infra.constant.IdentifyChar;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 /**
@@ -21,14 +22,14 @@ public class IdentifyCodeInterceptor implements HandlerInterceptor {
         String code = request.getParameter("identifyCode");
 
         System.out.println("input: " + code);
-        System.out.println("code in session: " + (String) session.getAttribute("identifyCode"));
+        System.out.println("code in session: " + session.getAttribute(IdentifyChar.KEY_IN_SESSION));
 
         if (code == null || code.trim().isEmpty()) {
             writer.println("you need input an identify code");
             response.sendError(400);
             return false;
         }
-        if (!code.equals((String) session.getAttribute("identifyCode"))) {
+        if (!code.equals(session.getAttribute(IdentifyChar.KEY_IN_SESSION))) {
             writer.println("you need check the identify code");
             response.sendError(400);
             return false;

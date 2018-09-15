@@ -5,7 +5,7 @@ import javax.validation.constraints.Min;
 /**
  * @author zty
  *
- * <p>分页查询对象</p>
+ * <p>page</p>
  */
 public class Page {
 

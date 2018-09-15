@@ -9,7 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @author zty
  *
- * <p>观看历史类</p>
+ * <p>history</p>
  */
 @Table(name = "giggle_history")
 public class History {

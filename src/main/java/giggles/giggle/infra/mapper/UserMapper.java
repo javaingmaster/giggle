@@ -1,37 +1,35 @@
 package giggles.giggle.infra.mapper;
 
 import giggles.giggle.domain.entity.User;
-import giggles.giggle.infra.tkMapper.TkMapper;
+import giggles.giggle.infra.tkmapper.TkMapper;
 
 /**
  * @author zty
  *
- * <p>用户mapper</p>
+ * <p>user mapper</p>
  */
 public interface UserMapper extends TkMapper<User> {
     /**
-     * <p>依据用户名更新数据,
-     * 注意该方法没有返回列表，因此默认只能查询出一个结果
-     * ，所以注册时要控制用户名不能重复</p>
+     * <p>query user by name, you must make sure that no same user in database</p>
      *
-     * @param username 用户名
-     * @return 用户信息
+     * @param username
+     * @return
      */
     public User findUserByName(String username);
 
     /**
-     * <p>更新带有版本属性的安全数据</p>
+     * <p>update user safely</p>
      *
-     * @param user 更新的数据
-     * @return 返回更新后的数据
+     * @param user
+     * @return
      */
     public int updateWithSafeControl(User user);
 
     /**
-     * <p>删除某用户</p>
+     * <p>delete user by name</p>
      *
-     * @param username 用户名
-     * @return 空或者not found
+     * @param username
+     * @return null or not found
      */
     public int deleteUserByName(String username);
 }

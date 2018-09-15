@@ -7,7 +7,7 @@ import com.alibaba.druid.support.http.StatViewServlet;
 
 /**
  * @author zty
- * <p>druid数据源状态监控</p>
+ * <p>druid monitor</p>
  */
 @WebServlet(urlPatterns = "/druid/*",
         initParams = {

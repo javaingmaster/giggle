@@ -3,7 +3,7 @@ package giggles.giggle.infra.constant;
 /**
  * @author zty
  *
- * <p>验证码相关常量</p>
+ * <p>identify</p>
  */
 public class IdentifyChar {
     public static final char[] IDENTIFY_CHARS = {
@@ -20,4 +20,6 @@ public class IdentifyChar {
     public static final int HEIGHT = 40;
 
     public static final int FONT_SIZE = 30;
+
+    public static final String KEY_IN_SESSION = "identifyCode";
 }

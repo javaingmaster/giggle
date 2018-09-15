@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 /**
  * @author zty
  *
- * <p>评论持久层实现</p>
+ * <p>comment repository impl</p>
  */
 @Repository
 public class CommentRepositoryImpl implements CommentRepository {

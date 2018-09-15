@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 /**
  * @author zty
  *
- * <p>视频类别实体</p>
+ * <p>catagroy</p>
  */
 @Table(name = "giggle_catagroy")
 public class Catagroy {
@@ -18,7 +18,8 @@ public class Catagroy {
     @NotNull
     private String catagroyName;
 
-    public Catagroy(){}
+    public Catagroy() {
+    }
 
     public Catagroy(@NotNull String catagroyName) {
         this.catagroyName = catagroyName;

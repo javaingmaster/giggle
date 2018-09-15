@@ -3,7 +3,7 @@ package giggles.giggle.infra.constant;
 /**
  * @author zty
  *
- * <p>权限相关配置常量</p>
+ * <p>authority</p>
  */
 public class Authority {
     public static final int PUBLIC = 1;

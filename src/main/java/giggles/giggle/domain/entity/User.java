@@ -13,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /**
  * @author zty
  *
- * <p>用户实体类</p>
+ * <p>user</p>
  */
 @Table(name = "giggle_user")
 public class User extends AuditDomain {

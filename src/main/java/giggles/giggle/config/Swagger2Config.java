@@ -24,7 +24,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author zty
  *
- * <p>swagger和mvc自定义配置管理</p>
+ * <p>swagger and springmvc config</p>
  */
 @Configuration
 @EnableSwagger2
@@ -54,21 +54,21 @@ public class Swagger2Config extends WebMvcConfigurationSupport {
     }
 
     /**
-     * <p>配置swagger的信息</p>
+     * <p>swagger information</p>
      *
-     * @return 返回信息对象
+     * @return
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("giggle v1版本api")
-                .description("简单优雅的restful风格")
+                .title("giggle v1 version api")
+                .description("elegant restful style")
                 .termsOfServiceUrl("https://blog.csdn.net/qq_33905749")
                 .version("1.0")
                 .build();
     }
 
     /**
-     * @return <p>返回token配置构建参数</p>
+     * @return <p>token param config</p>
      */
     private List<Parameter> setHeaderToken() {
         ParameterBuilder parameterBuilder = new ParameterBuilder();

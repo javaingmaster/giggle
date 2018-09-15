@@ -39,7 +39,7 @@ mybatis:
     map-underscore-to-camel-case: true
 
 mapper:
-  mappers: giggles.giggle.infra.tkMapper.TkMapper
+  mappers: giggles.giggle.infra.tkmapper.TkMapper
   identity: MYSQL
 
 management:
