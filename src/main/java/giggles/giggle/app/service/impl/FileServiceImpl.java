@@ -50,7 +50,7 @@ public class FileServiceImpl implements FileService {
                 File uploadFilePath = new File(filePath + "\\" + originName);
                 in = file.getInputStream();
                 fileOutputStream = new FileOutputStream(uploadFilePath);
-                
+
                 if (!uploadFilePath.exists()) {
                     uploadFilePath.createNewFile();
                 } else {
