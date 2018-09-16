@@ -2,6 +2,7 @@ package giggles.giggle.domain.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * <p>history</p>
  */
 @Table(name = "giggle_history")
-public class History {
+public class History implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long historyId;

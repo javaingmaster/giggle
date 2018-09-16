@@ -2,6 +2,7 @@ package giggles.giggle.domain.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author zty
@@ -9,7 +10,7 @@ import javax.validation.constraints.NotNull;
  * <p>catagroy</p>
  */
 @Table(name = "giggle_catagroy")
-public class Catagroy {
+public class Catagroy implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long catagroyId;

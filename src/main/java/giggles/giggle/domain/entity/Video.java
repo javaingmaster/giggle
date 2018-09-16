@@ -13,27 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * <p>video</p>
  */
 @Table(name = "giggle_video")
-public class Video extends AuditDomain {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer videoId;
-
-    @Column(name = "video_name")
-    @NotNull
-    private String videoName;
-
-    @Column(name = "video_description")
-    private String videoDescription;
-
-    @Column(name = "video_upload_time")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date videoUploadTime;
-
-    @Column(name = "video_path")
-    private String videoPath;
-
-    @Column(name = "video_check")
-    private Integer videoCheck;
+public class Video extends FileModel {
 
     @Column(name = "video_like")
     private Integer videoLike;
@@ -49,70 +29,16 @@ public class Video extends AuditDomain {
     public Video() {
     }
 
-    public Video(@NotNull String videoName) {
-        this.videoName = videoName;
+    public Video(String fileName, String filePublisher) {
+        this.fileName = fileName;
+        this.filePublisher = filePublisher;
     }
 
-    public Video(@NotNull String videoName, String videoDescription, Date videoUploadTime) {
-        this.videoName = videoName;
-        this.videoDescription = videoDescription;
-        this.videoUploadTime = videoUploadTime;
-    }
-
-    public Integer getVideoId() {
-        return videoId;
-    }
-
-    public void setVideoId(Integer videoId) {
-        this.videoId = videoId;
-    }
-
-    public String getVideoName() {
-        return videoName;
-    }
-
-    public void setVideoName(String videoName) {
-        this.videoName = videoName;
-    }
-
-    public String getVideoDescription() {
-        return videoDescription;
-    }
-
-    public List<Catagroy> getCatagroys() {
-        return catagroys;
-    }
-
-    public void setCatagroys(List<Catagroy> catagroys) {
-        this.catagroys = catagroys;
-    }
-
-    public void setVideoDescription(String videoDescription) {
-        this.videoDescription = videoDescription;
-    }
-
-    public Date getVideoUploadTime() {
-        return videoUploadTime;
-    }
-
-    public void setVideoUploadTime(Date videoUploadTime) {
-        this.videoUploadTime = videoUploadTime;
-    }
-
-    public String getVideoPath() {
-        return videoPath;
-    }
-
-    public void setVideoPath(String videoPath) {
-        this.videoPath = videoPath;
-    }
-
-    public Integer getVideoCheck() {
-        return videoCheck;
-    }
-
-    public void setVideoCheck(Integer videoCheck) {
-        this.videoCheck = videoCheck;
+    public Video(String fileName, String filePublisher, String fileDescription, Date fileUploadTime) {
+        this.fileName = fileName;
+        this.fileDescription = fileDescription;
+        this.fileUploadTime = fileUploadTime;
+        this.filePublisher = filePublisher;
     }
 
     public Integer getVideoLike() {
@@ -139,12 +65,11 @@ public class Video extends AuditDomain {
         this.videoPlay = videoPlay;
     }
 
-    @Override
-    public String toString() {
-        return "Video{" +
-                "videoId=" + videoId +
-                ", videoName='" + videoName + '\'' +
-                ", videoUploadTime=" + videoUploadTime +
-                '}';
+    public List<Catagroy> getCatagroys() {
+        return catagroys;
+    }
+
+    public void setCatagroys(List<Catagroy> catagroys) {
+        this.catagroys = catagroys;
     }
 }

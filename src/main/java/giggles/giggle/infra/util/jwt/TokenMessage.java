@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @author zty
- * <p>token信息类</p>
+ * <p>token information</p>
  */
 public class TokenMessage {
     private String name;

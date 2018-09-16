@@ -12,7 +12,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  *
  * <p>public params</p>
  */
-public class AuditDomain {
+public class AuditDomain implements Serializable{
 
     @Column(name = "last_update")
     @DateTimeFormat(pattern="yyyy-MM-dd")

@@ -12,7 +12,7 @@ import org.springframework.validation.BindingResult;
 /**
  * @author zty
  *
- * <p>校验工具类</p>
+ * <p>valid util</p>
  */
 public class ValidatorUtil {
     public static boolean isThisValue(Object o, Object value, ConstraintValidatorContext context) {
@@ -21,7 +21,7 @@ public class ValidatorUtil {
     }
 
     /**
-     * <p>创建验证码</p>
+     * <p>create identify code</p>
      *
      * @return object[0] is image and object[1] is code
      */

@@ -7,13 +7,13 @@ import org.springframework.web.method.HandlerMethod;
 /**
  * @author zty
  *
- * <p>获取注解的工具类</p>
+ * <p>annotation util</p>
  */
 public class AnnotationUtil {
     /**
-     * @param handlerMethod <p>包含方法、参数等反射对象的信息类</p>
-     * @param classType     <p>依据该参数获取对应的注解类型</p>
-     * @return <p>返回该注解</p>
+     * @param handlerMethod <p>an information class which includes methods, arguments and other params</p>
+     * @param classType     <p>type class you need</p>
+     * @return <p>an annotation</p>
      */
     public static Annotation getAnnotation(HandlerMethod handlerMethod, Class<? extends Annotation> classType) {
         return handlerMethod.getMethod().getAnnotation(classType);

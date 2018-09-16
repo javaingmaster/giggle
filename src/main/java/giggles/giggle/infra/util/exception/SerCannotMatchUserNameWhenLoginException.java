@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>登陆时用户名错误</p>
+ * <p>false username</p>
  */
 public class SerCannotMatchUserNameWhenLoginException extends RuntimeException {
     public SerCannotMatchUserNameWhenLoginException() {

@@ -1,5 +1,6 @@
 package giggles.giggle.app.service;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import giggles.giggle.domain.entity.Page;

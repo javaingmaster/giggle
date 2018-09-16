@@ -8,7 +8,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * @author zty
- * 主类
+ *
+ * <p>main class</p>
  */
 @ServletComponentScan(basePackages = "giggles.giggle.config")
 @MapperScan("giggles.giggle.infra.mapper")

@@ -26,7 +26,6 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User create(User user) {
-        //密码加密
         String pwd = user.getUserPassword();
         user.setUserPassword(DigestUtils.md5Hex(pwd + PasswordSafety.SALT));
         user.setLastUpdate(new Date());
@@ -45,7 +44,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     /**
-     * <p>if cannot query a user, throw an exception and the function should be test for its safety in multi</p>
+     * <p>if cannot query a user, throw an exception and the function should be test for its safety in multithreading</p>
      *
      * @param username
      * @return

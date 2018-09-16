@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>根据用户查询不到用户</p>
+ * <p>cannot query a user exception</p>
  */
 public class RepFindUserByNameException extends RuntimeException {
     public RepFindUserByNameException() {

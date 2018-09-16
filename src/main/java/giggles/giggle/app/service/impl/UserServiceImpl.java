@@ -1,5 +1,6 @@
 package giggles.giggle.app.service.impl;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import giggles.giggle.app.service.UserService;
@@ -36,7 +37,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(rollbackFor = RuntimeException.class,readOnly = true)
+    @Transactional(rollbackFor = RuntimeException.class, readOnly = true)
     public User findWithName(String username) {
         return userRepository.findUserByName(username);
     }
@@ -62,6 +63,7 @@ public class UserServiceImpl implements UserService {
         User userInDatabase = userRepository.findUserByName(username);
         if (null != userInDatabase) {
             if (DigestUtils.md5Hex(user.getUserPassword()).equals(userInDatabase.getUserPassword())) {
+                //创建token
                 return Results.success(userInDatabase);
             }
             throw new SerCannotMatchPasswordWhenLoginException(" cannot match password when login ");

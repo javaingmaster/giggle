@@ -29,7 +29,10 @@ spring:
     filters: stat,wall,log4j2
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql\=true;druid.stat.slowSqlMillis\=5000
-
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 10000MB
 
 
 mybatis:

@@ -2,6 +2,7 @@ package giggles.giggle.domain.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * <p>comment</p>
  */
 @Table(name = "giggle_comment")
-public class Comment {
+public class Comment implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer commentId;

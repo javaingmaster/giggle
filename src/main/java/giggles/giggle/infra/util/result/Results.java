@@ -5,57 +5,57 @@ import org.springframework.http.ResponseEntity;
 
 /**
  * @author zty
- * <>结果返回类</p>
+ * <p>response for http request</p>
  */
 public class Results {
     public Results() {
     }
 
     /**
-     * <p>请求成功返回200</p>
+     * <p>success request 200</p>
      *
-     * @param data 相应数据
+     * @param data
      * @param <T>
-     * @return 相应对象
+     * @return
      */
     public static <T> ResponseEntity<T> success(T data) {
         return new ResponseEntity<T>(data, HttpStatus.OK);
     }
 
     /**
-     * <p>请求成功返回200，但是不返回数据</p>
+     * <p>success request 200</p>
      *
-     * @param <T> 相应数据
-     * @return 无数据提示
+     * @param <T>
+     * @return
      */
     public static <T> ResponseEntity<T> success() {
         return new ResponseEntity<T>(HttpStatus.OK);
     }
 
     /**
-     * <p>请求成功返回201</p>
+     * <p>success create 201</p>
      *
-     * @param data 相应数据
+     * @param data
      * @param <T>
-     * @return 相应对象
+     * @return
      */
     public static <T> ResponseEntity<T> created(T data) {
         return new ResponseEntity<T>(data, HttpStatus.CREATED);
     }
 
     /**
-     * <p>请求成功返回204</p>
+     * <p>success delete 204</p>
      *
-     * @param data 相应数据
+     * @param data
      * @param <T>
-     * @return 相应对象
+     * @return
      */
     public static <T> ResponseEntity<T> deleted(T data) {
         return new ResponseEntity<T>(data, HttpStatus.NO_CONTENT);
     }
 
     /**
-     * <p>请求错误400</p>
+     * <p>bad request 400</p>
      *
      * @param data
      * @param <T>
@@ -66,7 +66,7 @@ public class Results {
     }
 
     /**
-     * <p>请求错误400，无数据返回</p>
+     * <p>bad request 400</p>
      *
      * @param <T>
      * @return
@@ -76,7 +76,7 @@ public class Results {
     }
 
     /**
-     * <P>请求未授权401</P>
+     * <P>no authority 401</P>
      *
      * @param <T>
      * @return
@@ -86,7 +86,7 @@ public class Results {
     }
 
     /**
-     * <p>请求禁止访问403/p>
+     * <p>forbidden request 403/p>
      *
      * @param <T>
      * @return
@@ -96,7 +96,7 @@ public class Results {
     }
 
     /**
-     * <p>服务器错误，返回500</p>
+     * <p>server error 500</p>
      *
      * @param data
      * @param <T>
@@ -107,7 +107,7 @@ public class Results {
     }
 
     /**
-     * <p>服务器错误返回500，无数据返回</p>
+     * <p>server error 500</p>
      *
      * @param <T>
      * @return

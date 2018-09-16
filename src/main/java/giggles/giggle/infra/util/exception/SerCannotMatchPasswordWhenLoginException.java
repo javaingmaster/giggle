@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>登陆时密码错误</p>
+ * <p>false password</p>
  */
 public class SerCannotMatchPasswordWhenLoginException extends RuntimeException {
     public SerCannotMatchPasswordWhenLoginException() {

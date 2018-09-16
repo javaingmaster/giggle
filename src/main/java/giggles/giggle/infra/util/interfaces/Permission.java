@@ -8,13 +8,13 @@ import java.lang.annotation.Target;
 /**
  * @author zty
  *
- * <p>自定义注解</p>
+ * <p>authority annotation</p>
  */
 @Target(value = {ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Permission {
     /**
-     * @return 返回api权限值
+     * @return return level of authority
      */
     int level() default 1;
 }

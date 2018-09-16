@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>请求参数校验异常</p>
+ * <p>request params exception</p>
  */
 public class ConBindingResultException extends RuntimeException {
     public ConBindingResultException() {

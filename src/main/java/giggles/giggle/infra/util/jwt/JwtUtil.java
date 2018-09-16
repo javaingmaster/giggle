@@ -13,12 +13,12 @@ import io.jsonwebtoken.SignatureAlgorithm;
 /**
  * @author zty
  *
- * <p>jwt工具类</p>
+ * <p>jwt util</p>
  */
 public class JwtUtil {
 
     /**
-     * @return 生成token
+     * @return create token
      */
     public static String createToken() {
         Date iatDate = new Date();
@@ -38,8 +38,8 @@ public class JwtUtil {
     }
 
     /**
-     * @param token token字符串
-     * @return 解析token后的信息对象
+     * @param token token
+     * @return an instance after parsing token
      */
     public static TokenMessage parseToken(String token) {
         TokenMessage tokenMessage = new TokenMessage();

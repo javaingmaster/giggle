@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -16,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
  * <p>user</p>
  */
 @Table(name = "giggle_user")
-public class User extends AuditDomain {
+public class User extends AuditDomain implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer userId;

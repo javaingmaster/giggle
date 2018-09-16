@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>用户已经存在，用户名重复</p>
+ * <p>double same user</p>
  */
 public class SerUserAlreadyExistException extends RuntimeException {
     public SerUserAlreadyExistException() {

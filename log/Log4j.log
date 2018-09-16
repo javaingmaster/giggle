@@ -1,0 +1,114 @@
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-9 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-10 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-1 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-2 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-3 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-4 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-9 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-10 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-1 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-2 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-3 giggles.giggle.api.controller.v1.ImageController - get identify image
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception
+INFO http-nio-8888-exec-9 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception
+INFO http-nio-8888-exec-10 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception
+INFO http-nio-8888-exec-3 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class org.springframework.web.multipart.MaxUploadSizeExceededException
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class org.springframework.web.multipart.MaxUploadSizeExceededException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-4 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw MaxUploadSizeExceededException exception
+INFO http-nio-8888-exec-9 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-6 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} exit cache
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class org.springframework.jdbc.BadSqlGrammarException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-6 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-1 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-1 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-7 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class java.lang.NullPointerException
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.UserController - post request: /users
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw ConBindingResultException exception
+INFO http-nio-8888-exec-5 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-5 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+DEBUG http-nio-8888-exec-5 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} enter cache
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.v1.FileUploadController - upload file
+DEBUG http-nio-8888-exec-8 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20000} exit cache
+INFO http-nio-8888-exec-8 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw Exception exception: class org.springframework.dao.DataIntegrityViolationException
+INFO http-nio-8888-exec-9 giggles.giggle.api.controller.v1.FileUploadController - upload file
+DEBUG http-nio-8888-exec-9 com.alibaba.druid.pool.PreparedStatementPool - {conn-10005, pstmt-20002} enter cache
+INFO http-nio-8888-exec-10 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-4 giggles.giggle.api.controller.v1.FileUploadController - upload file
+INFO http-nio-8888-exec-4 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+INFO http-nio-8888-exec-4 giggles.giggle.api.controller.handler.GlobalExceptionHandler - throw SerFileNameAlreadyExistsException exception

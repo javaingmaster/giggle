@@ -9,10 +9,10 @@ import giggles.giggle.infra.util.validator.CheckIfOneValidator;
 /**
  * @author zty
  *
- * <p></p>
+ * <p>test annotation</p>
  */
 
-@Target( { ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE })
+@Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = CheckIfOneValidator.class)
 @Documented

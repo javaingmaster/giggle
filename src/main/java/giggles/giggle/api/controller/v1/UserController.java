@@ -1,5 +1,6 @@
 package giggles.giggle.api.controller.v1;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import giggles.giggle.app.service.UserService;

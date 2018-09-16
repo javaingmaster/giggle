@@ -3,7 +3,7 @@ package giggles.giggle.infra.util.exception;
 /**
  * @author zty
  *
- * <p>缺少请求参数</p>
+ * <p>loss request params exception</p>
  */
 public class ConMissRequestParamException extends RuntimeException {
 

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 /**
  * @author zty
  *
- * <p>校验验证码</p>
+ * <p>check identify code</p>
  */
 public class IdentifyCodeInterceptor implements HandlerInterceptor {
     @Override
@@ -20,9 +20,6 @@ public class IdentifyCodeInterceptor implements HandlerInterceptor {
         HttpSession session = request.getSession();
         PrintWriter writer = response.getWriter();
         String code = request.getParameter("identifyCode");
-
-        System.out.println("input: " + code);
-        System.out.println("code in session: " + session.getAttribute(IdentifyChar.KEY_IN_SESSION));
 
         if (code == null || code.trim().isEmpty()) {
             writer.println("you need input an identify code");

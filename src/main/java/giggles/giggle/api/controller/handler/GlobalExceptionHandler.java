@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 /**
  * @author zty
@@ -91,7 +92,37 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = SerUserAlreadyExistException.class)
     @ResponseBody
     public Object userAlreadyExist(HttpServletRequest req, SerUserAlreadyExistException e) throws SerUserAlreadyExistException {
-        logger.info("throw  SerUserAlreadyExistException exception");
+        logger.info("throw SerUserAlreadyExistException exception");
+        return Results.invalid(req.getRequestURI() + BAD_REQUEST_NOTE + e.getMessage());
+    }
+
+    /**
+     * <p>file that you upload exceed the max size </p>
+     *
+     * @param req
+     * @param e
+     * @return
+     * @throws MaxUploadSizeExceededException
+     */
+    @ExceptionHandler(value = MaxUploadSizeExceededException.class)
+    @ResponseBody
+    public Object exceedMaxSizeWhenUpload(HttpServletRequest req, MaxUploadSizeExceededException e) throws MaxUploadSizeExceededException {
+        logger.info("throw MaxUploadSizeExceededException exception");
+        return Results.invalid(req.getRequestURI() + BAD_REQUEST_NOTE + e.getMessage());
+    }
+
+    /**
+     * <p>same uploaded file</p>
+     *
+     * @param req
+     * @param e
+     * @return
+     * @throws SerFileNameAlreadyExistsException
+     */
+    @ExceptionHandler(value = SerFileNameAlreadyExistsException.class)
+    @ResponseBody
+    public Object fileNameExistsWhenUpload(HttpServletRequest req, SerFileNameAlreadyExistsException e) throws SerFileNameAlreadyExistsException {
+        logger.info("throw SerFileNameAlreadyExistsException exception");
         return Results.invalid(req.getRequestURI() + BAD_REQUEST_NOTE + e.getMessage());
     }
 
@@ -101,8 +132,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public Object scheduleError(HttpServletRequest req, Exception e) {
-        logger.info("throw Exception exception");
-        return Results.invalid(req.getRequestURI() + " unknown error " + e.getMessage());
+        logger.info("throw Exception exception: " + e.getClass());
+        return Results.error(req.getRequestURI() + " server unknown error " + e.getMessage());
     }
 }
 

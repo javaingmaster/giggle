@@ -1,13 +1,14 @@
 package giggles.giggle.domain.entity;
 
 import javax.validation.constraints.Min;
+import java.io.Serializable;
 
 /**
  * @author zty
  *
  * <p>page</p>
  */
-public class Page {
+public class Page implements Serializable {
 
     @Min(0)
     private int pageNum;
